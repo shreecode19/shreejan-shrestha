@@ -62,7 +62,7 @@ const Hero = () => {
               </span>
             </h1>
 
-            <p className="text-base md:text-lg text-foreground/70 leading-relaxed max-w-xl mx-auto lg:mx-0 mb-8">
+            <p className="text-base md:text-lg  leading-relaxed max-w-xl mx-auto lg:mx-0 mb-8">
               I’m a designer and student focused on blending creativity and usability to build intuitive, engaging user experiences.
             </p>
 
