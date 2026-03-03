@@ -98,7 +98,7 @@ export default function ProjectDetail() {
                     className="pointer-events-none absolute -top-32 left-1/2 -translate-x-1/2 w-[900px] h-[500px] rounded-full opacity-20"
                     style={{
                         background: "radial-gradient(ellipse at center, hsl(var(--primary)) 0%, transparent 70%)",
-                        filter: "blur(80px)",
+                        filter: "blur(90px)",
                     }}
                 />
 
