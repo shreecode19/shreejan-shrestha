@@ -1,13 +1,14 @@
 import { motion } from "framer-motion";
-import { Code, Palette, Figma, FileCode, Sparkles, PenTool } from "lucide-react";
+import { Code, Palette, Figma, FileCode, Sparkles, PenTool, Atom } from "lucide-react";
+import React from "react";
 
 const skillCategories = [
   {
     title: "Frontend Development",
     skills: [
       { name: "HTML & CSS", icon: FileCode },
-      { name: "JavaScript", icon: Code },
-      { name: "React", icon: Sparkles },
+      { name: "TypeScript", icon: Code },
+      { name: "React", icon: Atom },
     ],
   },
   {
