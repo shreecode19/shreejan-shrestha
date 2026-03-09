@@ -14,6 +14,11 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import rovers from "@/assets/roversnepal.svg";
 import portfolio from "@/assets/portfolio.png";
+import pickncare from "@/assets/pickncare.png";
+import unior from "@/assets/unior.png";
+import tenx from "@/assets/tenx.png";
+import school from "@/assets/school.png";
+import speedpackers from "@/assets/speedpackers.png";
 
 
 type ProjectItem = {
@@ -50,13 +55,12 @@ const allProjects: ProjectItem[] = [
     slug: "pickncare",
     title: "Pickncare",
     description: "A modern website UI design with clean aesthetics.",
-    image:
-      "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=500&h=300&fit=crop",
+    image:pickncare,
     designUrl:
       "https://www.figma.com/proto/eFRV2kLxtMCHgOriXDgpNl/pickncare?node-id=1348-1889&t=o2lxKPPhDdtwUgqI-1&scaling=scale-down&content-scaling=fixed&page-id=202%3A987&starting-point-node-id=1348%3A1889&show-proto-sidebar=1",
     liveUrl: "https://pickncare.com",
-    imageFit: "cover",
-    imageScale: 1,
+    imageFit: "contain",
+    imageScale: 0.7,
   },
   {
     id: 3,
@@ -76,12 +80,11 @@ const allProjects: ProjectItem[] = [
     slug: "unior-consulting",
     title: "Unior Consulting",
     description: "A modern website UI design with clean aesthetics.",
-    image:
-      "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=500&h=300&fit=crop",
+    image: unior,
     designUrl:
       "https://www.figma.com/proto/eRiibNrcWTss0Y68nuZFHT/unior?node-id=454-458&t=UN1ov9nTgrBEttlS-0&scaling=scale-down&content-scaling=fixed&page-id=454%3A457",
-    imageFit: "cover",
-    imageScale: 1,
+    imageFit: "contain",
+    imageScale: 0.7,
   },
   {
     id: 5,
@@ -99,11 +102,10 @@ const allProjects: ProjectItem[] = [
     slug: "tenx-group",
     title: "TenX Group",
     description: "A modern website UI design with clean aesthetics.",
-    image:
-      "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=500&h=300&fit=crop",
+    image: tenx,
     designUrl: "https://www.figma.com/proto/jXcob59BZONDut1ytMKxBb/TenX-Group?node-id=38-573",
     liveUrl: "https://tenxnepal.com/",
-    imageFit: "cover",
+    imageFit: "contain",
     imageScale: 1,
   },
   {
@@ -167,8 +169,7 @@ const allProjects: ProjectItem[] = [
     slug: "school-management-system",
     title: "School Management System",
     description: "A modern website UI design with clean aesthetics.",
-    image:
-      "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=500&h=300&fit=crop",
+    image: school,
     designUrl:
       "https://www.figma.com/proto/j9nBSUj255AY18cpbjFVE1/School?node-id=97-235&t=UN1ov9nTgrBEttlS-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=97%3A235",
     imageFit: "cover",
@@ -179,10 +180,10 @@ const allProjects: ProjectItem[] = [
     slug: "speed pakers-and-movers",
     title: "Speed Packers and Movers",
     description: "A modern website UI design with clean aesthetics.",
-    image:
-      "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=500&h=300&fit=crop",
+    image: speedpackers,
     designUrl:
       "https://www.figma.com/proto/j9nBSUj255AY18cpbjFVE1/School?node-id=97-235&t=UN1ov9nTgrBEttlS-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=97%3A235",
+    liveUrl: "https://speedpmnepal.com/",
     imageFit: "cover",
     imageScale: 1,
   },
