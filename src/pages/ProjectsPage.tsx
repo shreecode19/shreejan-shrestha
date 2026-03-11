@@ -182,7 +182,7 @@ const allProjects: ProjectItem[] = [
     description: "A modern website UI design with clean aesthetics.",
     image: speedpackers,
     designUrl:
-      "https://www.figma.com/proto/j9nBSUj255AY18cpbjFVE1/School?node-id=97-235&t=UN1ov9nTgrBEttlS-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=97%3A235",
+      "https://www.figma.com/design/z2ZYwjciXMgHZ5cA6HnekR/forex?node-id=231-593&t=7LgAZpGo2CkSQFWg-1",
     liveUrl: "https://speedpmnepal.com/",
     imageFit: "cover",
     imageScale: 1,
