@@ -19,6 +19,9 @@ import unior from "@/assets/unior.png";
 import tenx from "@/assets/tenx.png";
 import school from "@/assets/school.png";
 import speedpackers from "@/assets/speedpackers.png";
+import parallax from "@/assets/parallax.png";
+import binary from "@/assets/binary.png";
+
 
 
 type ProjectItem = {
@@ -54,7 +57,7 @@ const allProjects: ProjectItem[] = [
     id: 2,
     slug: "pickncare",
     title: "Pickncare",
-    description: "A modern website UI design with clean aesthetics.",
+    description: "A user-friendly platform connecting careseekers and caregivers.",
     image:pickncare,
     designUrl:
       "https://www.figma.com/proto/eFRV2kLxtMCHgOriXDgpNl/pickncare?node-id=1348-1889&t=o2lxKPPhDdtwUgqI-1&scaling=scale-down&content-scaling=fixed&page-id=202%3A987&starting-point-node-id=1348%3A1889&show-proto-sidebar=1",
@@ -66,7 +69,7 @@ const allProjects: ProjectItem[] = [
     id: 3,
     slug: "rovers-nepal",
     title: "Rovers Nepal",
-    description: "A modern website UI design with clean aesthetics.",
+    description: "A travel platform for discovering hotels, tours, and adventure activities in Nepal.",
     image: rovers,
     designUrl:
       "https://www.figma.com/design/WjodL0dW58h5uxnZPulkIF/rovers?node-id=630-3387&t=qGw1nWgU7WPFMF9B-1",
@@ -79,7 +82,7 @@ const allProjects: ProjectItem[] = [
     id: 4,
     slug: "unior-consulting",
     title: "Unior Consulting",
-    description: "A modern website UI design with clean aesthetics.",
+    description: "A platform connecting nurses with overseas job opportunities.",
     image: unior,
     designUrl:
       "https://www.figma.com/proto/eRiibNrcWTss0Y68nuZFHT/unior?node-id=454-458&t=UN1ov9nTgrBEttlS-0&scaling=scale-down&content-scaling=fixed&page-id=454%3A457",
@@ -90,9 +93,8 @@ const allProjects: ProjectItem[] = [
     id: 5,
     slug: "binaryburst-solutions",
     title: "Binaryburst Solutions",
-    description: "A modern website UI design with clean aesthetics.",
-    image:
-      "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=500&h=300&fit=crop",
+    description: "A professional company website showcasing services and brand identity.",
+    image:binary,
     liveUrl: "https://binaryburstsolutions.com/",
     imageFit: "cover",
     imageScale: 1,
@@ -101,7 +103,7 @@ const allProjects: ProjectItem[] = [
     id: 6,
     slug: "tenx-group",
     title: "TenX Group",
-    description: "A modern website UI design with clean aesthetics.",
+    description: "A clean and professional website built for a business presence online.",
     image: tenx,
     designUrl: "https://www.figma.com/proto/jXcob59BZONDut1ytMKxBb/TenX-Group?node-id=38-573",
     liveUrl: "https://tenxnepal.com/",
@@ -156,11 +158,10 @@ const allProjects: ProjectItem[] = [
   {
     id: 11,
     slug: "website-ui",
-    title: "Website UI",
-    description: "A modern website UI design with clean aesthetics.",
-    image:
-      "https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=500&h=300&fit=crop",
-    designUrl: "https://figma.com",
+    title: "Parallax Webdesign",
+    description: "A visually engaging website with interactive parallax effects.",
+    image: parallax,
+    designUrl: "https://www.figma.com/proto/BWb7houTdfhbnoDIV3xdeM/Untitled?node-id=0-1&p=f&t=aKvL5oC4N1pnnzN4-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1",
     imageFit: "cover",
     imageScale: 1,
   },
@@ -168,7 +169,7 @@ const allProjects: ProjectItem[] = [
     id: 12,
     slug: "school-management-system",
     title: "School Management System",
-    description: "A modern website UI design with clean aesthetics.",
+    description: "A smart solution for handling school records, tasks, and operations.",
     image: school,
     designUrl:
       "https://www.figma.com/proto/j9nBSUj255AY18cpbjFVE1/School?node-id=97-235&t=UN1ov9nTgrBEttlS-0&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=97%3A235",
@@ -179,7 +180,7 @@ const allProjects: ProjectItem[] = [
     id: 13,
     slug: "speed pakers-and-movers",
     title: "Speed Packers and Movers",
-    description: "A modern website UI design with clean aesthetics.",
+    description: "A company website for business details and delivery tracking.",
     image: speedpackers,
     designUrl:
       "https://www.figma.com/design/z2ZYwjciXMgHZ5cA6HnekR/forex?node-id=231-593&t=7LgAZpGo2CkSQFWg-1",
