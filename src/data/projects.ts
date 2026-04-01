@@ -1,41 +1,51 @@
 import portfolio from "@/assets/portfolio.png";
 import portfolio2 from "@/assets/portfolio2.png";
+import pickncare from "@/assets/pickncare.png";
+
+export interface ProjectMetric {
+  label: string;
+  value: string;
+}
+
+export interface ProjectGalleryItem {
+  src: string;
+  caption?: string;
+}
+
 export interface Project {
   id: number;
   slug: string;
   title: string;
-
   oneLiner: string;
-  role: string;
 
-  // UX Framing
-  problem: string;
-  userInsight: string;
-  designStrategy: string;
+  role: string;
+  duration?: string;
+  team?: string;
+  platform?: string;
+  tools?: string[];
 
   tags: string[];
   image: string;
 
   caseStudyUrl: string;
-
-  // Optional links
   prototypeUrl?: string;
   liveUrl?: string;
   codeUrl?: string;
+  designUrl?: string;
 
-  // Case Study Sections
-  uiSystem?: string[];
-  interactionMotion?: string[];
-  componentStrategy?: string[];
+  overview?: string;
+  problem: string;
+  goal?: string;
+  solution: string;
+
+  responsibilities?: string[];
   process?: string[];
-  results?: string[];
+  impact?: string[];
+  challenges?: string[];
+  learnings?: string[];
 
-  metrics?: {
-    value: string;
-    label: string;
-  }[];
-
-  gallery?: string[];
+  quickStats?: ProjectMetric[];
+  gallery?: ProjectGalleryItem[];
 }
 
 export const projects: Project[] = [
@@ -44,281 +54,174 @@ export const projects: Project[] = [
     slug: "portfolio-website",
     title: "Portfolio Website",
     oneLiner:
-      "A structured, case-study-first portfolio designed for recruiter scannability.",
+      "A recruiter-friendly portfolio designed to make case studies easier to scan and evaluate.",
+
     role: "UI/UX Designer + React Developer",
+    duration: "2 weeks",
+    team: "Solo project",
+    platform: "Responsive web",
+    tools: ["React", "TypeScript", "Tailwind CSS", "Framer Motion"],
 
-    problem:
-      "Recruiters spend less than 20 seconds scanning portfolios. Traditional layouts hide important information behind clutter.",
-    userInsight:
-      "Recruiters prioritize clarity, impact, and project depth over decorative visuals.",
-    designStrategy:
-      "Designed a case-study-first layout with clear hierarchy, strong typography, and minimal distractions.",
-
-    tags: ["React", "Responsive"],
-
-    image:
-      portfolio,
-    
+    tags: ["React", "Responsive", "Portfolio"],
+    image: portfolio,
 
     caseStudyUrl: "/projects/portfolio-website",
+    liveUrl: "https://shreecode19.github.io/shreejan-shrestha/",
+    codeUrl: "https://github.com/shreecode19/CODSOFT/tree/main/codsoft_task1",
 
-    liveUrl: "https://shreejanstha.com.np",
-    codeUrl:
-      "https://github.com/shreecode19/CODSOFT/tree/main/codsoft_task1",
+    overview:
+      "This project was built to present work in a cleaner, more structured way for recruiters and hiring managers. The focus was on faster scanning, stronger visual hierarchy, and reusable layout patterns for future case studies.",
 
-    uiSystem: [
-      "Consistent spacing scale (8pt system)",
-      "Clear typography hierarchy",
-      "Reusable button and card styles",
-      "Muted palette with strong primary accents",
-    ],
+    problem:
+      "Recruiters often scan portfolios quickly, so important work can get buried under cluttered layouts, weak hierarchy, and long blocks of content.",
 
-    interactionMotion: [
-      "Subtle fade-in animations using Framer Motion",
-      "Hover states to communicate affordance",
-      "Smooth image scaling for visual feedback",
-    ],
+    goal:
+      "Create a portfolio that highlights project value within the first screen and makes each case study easy to follow.",
 
-    componentStrategy: [
-      "Reusable Card and Button components",
-      "Data-driven project rendering",
-      "Slug-based routing for scalability",
-      "Separation of layout and content data",
+    solution:
+      "I designed a case-study-first portfolio with a stronger content hierarchy, reusable sections, responsive layout, and subtle motion that supports readability instead of distracting from it.",
+
+    responsibilities: [
+      "Defined the overall information architecture",
+      "Designed the visual hierarchy and spacing system",
+      "Built reusable React components for scalable project pages",
+      "Implemented responsive layouts and interaction states",
     ],
 
     process: [
-      "Defined recruiter priorities",
-      "Simplified navigation structure",
-      "Built reusable UI system",
-      "Iterated on visual clarity",
+      "Started by identifying what recruiters need first: project type, role, problem, and outcome.",
+      "Reworked the layout so the most important information appears above the fold.",
+      "Used a consistent spacing system and typography scale to improve readability.",
+      "Built reusable components so new projects can be added without redesigning the page structure.",
+      "Added subtle motion and hover states for feedback while keeping the experience lightweight.",
     ],
 
-    metrics: [
-      { value: "100%", label: "Responsive" },
-      { value: "Fast", label: "Load Speed" },
-      { value: "Clear", label: "Hierarchy" },
+    impact: [
+      "Made project pages easier to scan in the first few seconds",
+      "Created a stronger and more professional visual identity",
+      "Established a reusable structure for future case studies",
     ],
 
-    results: [
-      "Improved recruiter scannability",
-      "Stronger presentation of structured case studies",
-      "More professional visual identity",
+    challenges: [
+      "Balancing visual polish with recruiter-friendly readability",
+      "Keeping the interface premium without making it feel crowded",
+    ],
+
+    learnings: [
+      "Content hierarchy matters more than decorative effects",
+      "Showing impact early makes a project more memorable",
+      "Reusable structure improves both design consistency and development speed",
+    ],
+
+    quickStats: [
+      { value: "8pt", label: "Spacing system" },
+      { value: "Responsive", label: "Layout" },
+      { value: "Reusable", label: "Components" },
+      { value: "Case-study", label: "Content model" },
     ],
 
     gallery: [
-      portfolio,
-      portfolio2,
+      {
+        src: portfolio,
+        caption:
+          "Hero section designed to surface project value, role, and actions quickly.",
+      },
+      {
+        src: portfolio2,
+        caption:
+          "Detail page broken into short, scannable sections for easier review.",
+      },
     ],
   },
   {
-    id: 2,
-    slug: "pickncare",
-    title: "Pickncare",
-    oneLiner:
-      "A structured, case-study-first portfolio designed for recruiter scannability.",
-    role: "UI/UX Designer + React Developer",
+  id: 2,
+  slug: "pickncare",
+  title: "Pickncare",
+  oneLiner:
+    "A service-based platform that helps users find trusted caretakers and helps caretakers discover job opportunities.",
 
-    problem:
-      "Recruiters spend less than 20 seconds scanning portfolios. Traditional layouts hide important information behind clutter.",
-    userInsight:
-      "Recruiters prioritize clarity, impact, and project depth over decorative visuals.",
-    designStrategy:
-      "Designed a case-study-first layout with clear hierarchy, strong typography, and minimal distractions.",
+  role: "UI/UX Designer",
+  duration: "3 Months",
+  team: "Collaborative project",
+  platform: "Responsive web + Mobile app",
+  tools: ["Figma"],
 
-    tags: ["React", "UX Writing", "Responsive", "Framer Motion"],
+  tags: ["UI/UX", "Responsive", "Mobile App", "Service Platform"],
+  image: pickncare,
 
-    image:
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=700&fit=crop",
+  caseStudyUrl: "/projects/pickncare",
+  liveUrl: "https://pickncare.com/",
+  designUrl: " ",
 
-    caseStudyUrl: "/projects/portfolio-website",
+  overview:
+    "Pickncare is a service-oriented platform designed for two types of users: people looking for caretakers and individuals searching for caretaker jobs. The project began as a website and later expanded into a mobile app. My role focused on creating a clear, user-friendly experience that made it easy to explore features, navigate the platform, and build trust in the brand.",
 
-    liveUrl: "https://shreejanstha.com.np",
-    codeUrl:
-      "https://github.com/shreecode19/CODSOFT/tree/main/codsoft_task1",
+  problem:
+    "The platform included many features and content areas, which made it challenging to maintain a smooth user experience. Users needed a clearer structure to understand where features were located and how to complete their tasks without confusion.",
 
-    uiSystem: [
-      "Consistent spacing scale (8pt system)",
-      "Clear typography hierarchy",
-      "Reusable button and card styles",
-      "Muted palette with strong primary accents",
-    ],
+  goal:
+    "Design a clean and intuitive experience that helps users quickly understand the platform, move smoothly through its features, and feel confident using the brand across web and mobile.",
 
-    interactionMotion: [
-      "Subtle fade-in animations using Framer Motion",
-      "Hover states to communicate affordance",
-      "Smooth image scaling for visual feedback",
-    ],
+  solution:
+    "I created a structured and consistent UI system with improved hierarchy, responsive layouts, thoughtful color and font choices, and smoother navigation patterns. I shifted the visual direction from a cream-based palette to a pink theme to better align the interface with the brand identity and logo, while keeping the experience clean, accessible, and trustworthy.",
 
-    componentStrategy: [
-      "Reusable Card and Button components",
-      "Data-driven project rendering",
-      "Slug-based routing for scalability",
-      "Separation of layout and content data",
-    ],
+  responsibilities: [
+    "Designed the overall UI/UX for web and mobile experiences",
+    "Defined visual hierarchy, layout structure, and responsive behavior",
+    "Selected colors, typography, and interface styles aligned with the brand",
+    "Improved navigation flow for feature-heavy screens",
+    "Created reusable components in Figma for consistency and scalability",
+    "Helped strengthen brand loyalty through a more cohesive visual system",
+  ],
 
-    process: [
-      "Defined recruiter priorities",
-      "Simplified navigation structure",
-      "Built reusable UI system",
-      "Iterated on visual clarity",
-    ],
+  process: [
+    "Started with project requirement analysis to understand user needs, business goals, and platform structure.",
+    "Researched similar brands, competitors, and design patterns to identify opportunities for a cleaner experience.",
+    "Created wireframes to organize features and content into a clearer structure.",
+    "Explored color and font directions, then shifted the interface toward a pink theme to better match the brand logo.",
+    "Designed the UI for the landing page, dashboard, responsive web layouts, mobile views, and later the mobile app.",
+    "Built reusable Figma components to maintain consistency across screens and speed up design decisions.",
+    "Prepared documentation to support collaboration and handoff within the team.",
+  ],
 
-    metrics: [
-      { value: "100%", label: "Responsive" },
-      { value: "Fast", label: "Load Speed" },
-      { value: "Clear", label: "Hierarchy" },
-    ],
+  impact: [
+    "Made the platform easier to understand and navigate despite its many features",
+    "Created a stronger visual connection between the product and the brand identity",
+    "Improved consistency across web and mobile experiences",
+    "Established a reusable design system in Figma for future scalability",
+  ],
 
-    results: [
-      "Improved recruiter scannability",
-      "Stronger presentation of structured case studies",
-      "More professional visual identity",
-    ],
+  challenges: [
+    "Designing a smooth user experience for a feature-rich platform with a lot of content",
+    "Maintaining clear navigation and hierarchy across multiple sections",
+    "Ensuring consistency and accessibility across screens and devices",
+  ],
 
-    gallery: [
-      "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800",
-      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800",
-    ],
-  },
-  {
-    id: 3,
-    slug: "rovers-nepal",
-    title: "Rovers Nepal",
-    oneLiner:
-      "A structured, case-study-first portfolio designed for recruiter scannability.",
-    role: "UI/UX Designer + React Developer",
+  learnings: [
+    "Reusable components make design systems more efficient and scalable",
+    "Consistency in layout and interaction patterns improves usability",
+    "Clear hierarchy and smooth navigation are essential in feature-heavy products",
+    "Brand alignment through color and visual language strengthens the overall experience",
+  ],
 
-    problem:
-      "Recruiters spend less than 20 seconds scanning portfolios. Traditional layouts hide important information behind clutter.",
-    userInsight:
-      "Recruiters prioritize clarity, impact, and project depth over decorative visuals.",
-    designStrategy:
-      "Designed a case-study-first layout with clear hierarchy, strong typography, and minimal distractions.",
+  quickStats: [
+    { value: "Figma", label: "Design tool" },
+    { value: "Responsive", label: "Web experience" },
+    { value: "Mobile app", label: "Expanded platform" },
+    // { value: "Component-based", label: "Design system" },
+  ],
 
-    tags: ["React", "UX Writing", "Responsive", "Framer Motion"],
-
-    image:
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=700&fit=crop",
-
-    caseStudyUrl: "/projects/portfolio-website",
-
-    liveUrl: "https://shreejanstha.com.np",
-    codeUrl:
-      "https://github.com/shreecode19/CODSOFT/tree/main/codsoft_task1",
-
-    uiSystem: [
-      "Consistent spacing scale (8pt system)",
-      "Clear typography hierarchy",
-      "Reusable button and card styles",
-      "Muted palette with strong primary accents",
-    ],
-
-    interactionMotion: [
-      "Subtle fade-in animations using Framer Motion",
-      "Hover states to communicate affordance",
-      "Smooth image scaling for visual feedback",
-    ],
-
-    componentStrategy: [
-      "Reusable Card and Button components",
-      "Data-driven project rendering",
-      "Slug-based routing for scalability",
-      "Separation of layout and content data",
-    ],
-
-    process: [
-      "Defined recruiter priorities",
-      "Simplified navigation structure",
-      "Built reusable UI system",
-      "Iterated on visual clarity",
-    ],
-
-    metrics: [
-      { value: "100%", label: "Responsive" },
-      { value: "Fast", label: "Load Speed" },
-      { value: "Clear", label: "Hierarchy" },
-    ],
-
-    results: [
-      "Improved recruiter scannability",
-      "Stronger presentation of structured case studies",
-      "More professional visual identity",
-    ],
-
-    gallery: [
-      "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800",
-      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800",
-    ],
-  },
-  {
-    id: 4,
-    slug: "unior-consulting",
-    title: "Unior Consulting",
-    oneLiner:
-        "A structured, case-study-first portfolio designed for recruiter scannability.",
-    role: "UI/UX Designer + React Developer",
-
-    problem:
-        "Recruiters spend less than 20 seconds scanning portfolios. Traditional layouts hide important information behind clutter.",
-    userInsight:
-        "Recruiters prioritize clarity, impact, and project depth over decorative visuals.",
-    designStrategy:
-        "Designed a case-study-first layout with clear hierarchy, strong typography, and minimal distractions.",
-
-    tags: ["React", "UX Writing", "Responsive", "Framer Motion"],
-
-    image:
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=1200&h=700&fit=crop",
-
-    caseStudyUrl: "/projects/portfolio-website",
-
-    liveUrl: "https://shreejanstha.com.np",
-    codeUrl:
-        "https://github.com/shreecode19/CODSOFT/tree/main/codsoft_task1",
-
-    uiSystem: [
-      "Consistent spacing scale (8pt system)",
-      "Clear typography hierarchy",
-      "Reusable button and card styles",
-      "Muted palette with strong primary accents",
-    ],
-
-    interactionMotion: [
-      "Subtle fade-in animations using Framer Motion",
-      "Hover states to communicate affordance",
-      "Smooth image scaling for visual feedback",
-    ],
-
-    componentStrategy: [
-      "Reusable Card and Button components",
-      "Data-driven project rendering",
-      "Slug-based routing for scalability",
-      "Separation of layout and content data",
-    ],
-
-    process: [
-      "Defined recruiter priorities",
-      "Simplified navigation structure",
-      "Built reusable UI system",
-      "Iterated on visual clarity",
-    ],
-
-    metrics: [
-      { value: "100%", label: "Responsive" },
-      { value: "Fast", label: "Load Speed" },
-      { value: "Clear", label: "Hierarchy" },
-    ],
-
-    results: [
-      "Improved recruiter scannability",
-      "Stronger presentation of structured case studies",
-      "More professional visual identity",
-    ],
-
-    gallery: [
-      "https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=800",
-      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800",
-    ],
-  },
-
+  gallery: [
+    {
+      src: pickncare,
+      caption:
+        "Landing page designed with a cleaner structure, improved hierarchy, and brand-aligned visuals.",
+    },
+    {
+      src: pickncare,
+      caption:
+        "Responsive and mobile app screens created to keep navigation smooth across devices.",
+    },
+  ],
+}
 ];
